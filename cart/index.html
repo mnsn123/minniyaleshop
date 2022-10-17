@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#1266f1" />
+    <title>Shopping Cart | Minniyal E shop</title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="canonical" href="https://monsoonmalabar.com/minniyaleshop/cart/">
+    <link rel="alternate" type="application/rss+xml" title="Minniyal E shop" href="https://monsoonmalabar.com/minniyaleshop/feed.xml">
+    
+    <meta property="og:url" content="https://monsoonmalabar.com/minniyaleshop/cart/">
+    <meta property="og:title" content="Shopping Cart|Minniyal E shop">
+    
+    <meta property="og:image" content="https://i.imgur.com/X3dNPXh.png">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://monsoonmalabar.com/minniyaleshop/js/jquery.shop.js"></script>
+
+
+    <link rel="icon" type="image/png" href="https://i.imgur.com/X3dNPXh.png"/>
+    <link rel="apple-touch-icon" sizes="512x512" href="https://i.imgur.com/X3dNPXh.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#1266f1">
+    <link rel="manifest" href="https://monsoonmalabar.com/minniyaleshop/manifest.json">
+
+    <script src="https://monsoonmalabar.com/minniyaleshop/js/sw-reg.js"></script>
+    <script src="https://monsoonmalabar.com/minniyaleshop/js/pwa-app.js"></script>
+
+    <link rel="stylesheet" href="https://monsoonmalabar.com/minniyaleshop/css/main.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Google Fonts -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+    <style>
+      .btn-primary, .primary-color {
+          background-color:#1266f1 !important;
+      }
+      .text-primary {
+          color: #1266f1 !important;
+      }
+    </style>
+    
+    
+    
+    
+    <script type="module">
+      import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+      const el = document.createElement('pwa-update');
+      document.body.appendChild(el);
+   </script>
+  </head>
+  <body class="bg-light">
+    <div class="site-container">
+      <header class="site-header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="wrap" style="margin-bottom: 80px;">  
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg justify-content-between fixed-top scrolling-navbar navbar-dark primary-color">
+
+            <!-- Navbar brand -->
+            <a class="navbar-brand" href="https://monsoonmalabar.com/minniyaleshop/">Minniyal E shop</a>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link px-2" href="https://monsoonmalabar.com/minniyaleshop/cart">
+                  <i class="fa fa-shopping-cart"></i> <span class="bg-danger badge"></span>
+                </a> 
+              </li>
+            </ul>
+            <!-- Collapse button -->
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+              aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> -->
+            
+            <!-- Collapsible content -->
+            <!-- <div class="collapse navbar-collapse" id="basicExampleNav">
+              <form class="form-inline">
+                <div class="md-form my-0">
+                  <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                </div>
+              </form>
+            </div> -->
+            <!-- Collapsible content -->
+          </nav>   
+        </div>
+      </header>
+      <div id="site" class="container my-4">
+	<div id="content" class="card card-body">
+		<h1 class="text-center" id="full-site">Shopping Cart</h1>
+		<form id="shopping-cart" action="https://monsoonmalabar.com/minniyaleshop/cart" method="get">
+			<div class="table-responsive text-nowrap">
+				<table class="shopping-cart table table-bordered">
+				<thead>
+					<tr>
+						<th scope="col">Item</th>
+						<th scope="col">Qty</th>
+						<th scope="col" colspan="2">Price</th>
+					</tr>
+				</thead>
+				<tbody>
+				
+				</tbody>
+				</table>
+			</div>
+			<p id="sub-total">
+				<strong>Total</strong>: <span id="stotal"></span>
+			</p>
+			<div id="shopping-cart-actions" class="text-center">
+				<input type="submit" name="update" id="update-cart" class="btn btn-md rounded-pill btn-primary" value="Update Cart" />
+				<input type="submit" name="delete" id="empty-cart" class="btn btn-md rounded-pill btn-primary" value="Empty Cart" />
+				<a href="https://monsoonmalabar.com/minniyaleshop/index.html" class="btn btn-md rounded-pill btn-primary">Continue Shopping</a>
+				<a href="https://monsoonmalabar.com/minniyaleshop/checkout" class="btn btn-md rounded-pill btn-primary">Go To Checkout</a>
+			</div>
+		</form>
+	</div>
+	
+	
+
+</div>
+      <div class="text-center my-3">
+        <a href="#" onclick="addToHomeScreen()" id="install" class="btn-md rounded-pill btn btn-primary pwa">Install App</a>
+        <a href="https://monsoonmalabar.com/minniyaleshop/blog" class="btn-md rounded-pill btn btn-primary">Blog</a>
+        <a href="https://monsoonmalabar.com/minniyaleshop/" class="btn-md rounded-pill btn btn-primary">Go Home</a>
+        <a href="https://www.monsoonmalabar.com/search_shop" class="btn-md rounded-pill btn btn-primary">Search nearby shops</a>
+        
+        <button class="btn-md rounded-pill btn btn-primary share-btn6">Share Shop</button>
+          <script>
+          document.querySelector('.share-btn6').addEventListener('click', function() {
+            console.log('clicked');
+              // const url = new URL(window.location.href);
+            if(navigator.share) {
+              navigator.share({
+                url
+              })
+              .then(() => console.log('Success'))
+              .catch((error) => console.log('Error sharing', error));
+            }
+          });
+        </script>
+
+        <!-- <p class="pwa my-2 note note-primary">Note: Install App button only works in google chrome browser in android phone. So update your chrome and open this site in chrome browser. In I phone open this portal in safari and <a href="https://forum.monsoonmalabar.com/board/1/-Mdg3u1VndHyGpLGMTIw">click here to know how to install</a>.</p> -->
+      </div>
+      <div style="width: 100%">
+        <p class="alert alert-primary text-center">Click on "view larger map" to get direction</p>
+        <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=11.0168445,76.9558321+(Your%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+      </div>
+      <div class="my-2 py-2 text-center">
+        <p class="alert alert-primary">Contact Seller</p>
+  			
+        <a href="tel:919600893226" class="btn btn-md btn-primary rounded-pill">Call</a>
+        <a href="https://wa.me/919600893226" class="btn btn-md btn-primary rounded-pill">Whatsapp</a>
+        
+        <a href="mailto:minniyalpvt@gmail.com" class="btn btn-md btn-primary rounded-pill">Email</a>
+      </div>
+    </div>
+    <div class="text-center my-2"><div id="google_translate_element"></div></div>
+    <!-- <script>
+      // const url = new URL(window.location.href);
+      const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
+      if (navigator.standalone || isStandalone) {
+        console.log('it works');
+      Array.from(
+        document.getElementsByClassName("pwa")
+      ).forEach((e)=>e.style.display='none')
+      }
+    </script> -->
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    
+      <script async src="https://monsoonmalabar.com/minniyaleshop/js/style-picker.js"></script>
+      <script>
+        $(document).ready(function(){
+       $('.zoom-2').zoom();
+      });
+      </script>
+      <script src="https://monsoonmalabar.com/minniyaleshop/js/s.min.js"></script>
+    
+    <script src="https://monsoonmalabar.com/minniyaleshop/js/infinite.js"></script>
+
+    <script>
+      // Custom Scripts
+    
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    
+    
+    // Minified Scripts
+    (function(){var gtConstEvalStartTime = new Date();/*
+    
+     Copyright The Closure Library Authors.
+     SPDX-License-Identifier: Apache-2.0
+    */
+    function d(b){var a=document.getElementsByTagName("head")[0];a||(a=document.body.parentNode.appendChild(document.createElement("head")));a.appendChild(b)}function _loadJs(b){var a=document.createElement("script");a.type="text/javascript";a.charset="UTF-8";a.src=b;d(a)}function _loadCss(b){var a=document.createElement("link");a.type="text/css";a.rel="stylesheet";a.charset="UTF-8";a.href=b;d(a)}function _isNS(b){b=b.split(".");for(var a=window,c=0;c<b.length;++c)if(!(a=a[b[c]]))return!1;return!0}
+    function _setupNS(b){b=b.split(".");for(var a=window,c=0;c<b.length;++c)a.hasOwnProperty?a.hasOwnProperty(b[c])?a=a[b[c]]:a=a[b[c]]={}:a=a[b[c]]||(a[b[c]]={});return a}window.addEventListener&&"undefined"==typeof document.readyState&&window.addEventListener("DOMContentLoaded",function(){document.readyState="complete"},!1);
+    if (_isNS('google.translate.Element')){return}(function(){var c=_setupNS('google.translate._const');c._cest = gtConstEvalStartTime;gtConstEvalStartTime = undefined;c._cl='en';c._cuc='googleTranslateElementInit';c._cac='';c._cam='';c._ctkk='440335.1449305758';var h='translate.googleapis.com';var s=(true?'https':window.location.protocol=='https:'?'https':'http')+'://';var b=s+h;c._pah=h;c._pas=s;c._pbi=b+'/translate_static/img/te_bk.gif';c._pci=b+'/translate_static/img/te_ctrl3.gif';c._pli=b+'/translate_static/img/loading.gif';c._plla=h+'/translate_a/l';c._pmi=b+'/translate_static/img/mini_google.png';c._ps=b+'/translate_static/css/translateelement.css';c._puh='translate.google.com';_loadCss(c._ps);_loadJs(b+'/translate_static/js/element/main.js');})();})();
+    </script>
+
+<div class="alert alert-info alert-dismissible fade show alert-fixed2" id="and-show" role="alert">
+  <button id="close2" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <div>1. Click on the Menu button ( Three vertical dots located top right side of this page like this <img src="https://keralapsc.monsoonmalabar.com/assets/images/vert-more.png"> ) <br /> 2. Then click Install App or Add to Home Screen</div>
+</div>
+
+<div class="alert alert-info alert-dismissible fade show alert-fixed" id="ios-show" role="alert">
+  <button id="close1" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <div><p>Install the app on your device to easily access it anytime.</p> 1. Click on the Menu button located down below like this <img src="https://keralapsc.monsoonmalabar.com/assets/images/ios-menu-btn.png"> 2. Then select 'Add to Home screen' <img src="https://keralapsc.monsoonmalabar.com/assets/images/ios-add-btn.png"></div>
+</div>
+
+
+  </body>
+</html>

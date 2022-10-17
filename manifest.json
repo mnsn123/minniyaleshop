@@ -1,0 +1,20 @@
+{
+  "dir": "auto",
+  "name": "Minniyal E shop",
+  "short_name": "Minniyal E shop",
+  "scope": "https://monsoonmalabar.com/minniyaleshop/",
+  "lang": "en",
+  "description": "The neighbourhood friend",
+  "icons": [
+    {
+      "src": "https://i.imgur.com/X3dNPXh.png",
+      "sizes": "512x512",
+      "type": "image\/png"
+    }
+  ],
+  "theme_color": "#1266f1",
+  "background_color": "#fdfdfd",
+  "start_url": "https://monsoonmalabar.com/minniyaleshop\/?external=false",
+  "display": "standalone",
+  "orientation": "natural"
+}
